@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 
 function AboutMe() {
@@ -61,7 +60,7 @@ I plan to be a social software engineer, I will impact my teammates by offering 
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <AboutMe />
     </div>
   );
