@@ -30,7 +30,7 @@ function Resume() {
   return (
     <div>
       <Document
-        file="../assets/resume.pdf"
+        file="resume.pdf"
         onLoadSuccess={onDocumentLoadSuccess}
       >
         <Page pageNumber={pageNumber} />
