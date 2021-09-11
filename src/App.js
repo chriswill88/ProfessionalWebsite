@@ -1,8 +1,48 @@
 import './App.css';
+import React, { useState } from 'react';
+import { Document, Page } from 'react-pdf';
+
+
+function picture() {
+  return (
+    <div>
+
+    </div>
+  )
+}
+
+function Portfolio() {
+  return (
+    <div>
+
+    </div>
+  )
+}
+
+function Resume() {
+  const [numPages, setNumPages] = useState(null);
+  const [pageNumber, setPageNumber] = useState(1);
+
+  function onDocumentLoadSuccess({ numPages }) {
+    setNumPages(numPages);
+  }
+
+  return (
+    <div>
+      <Document
+        file="../assets/resume.pdf"
+        onLoadSuccess={onDocumentLoadSuccess}
+      >
+        <Page pageNumber={pageNumber} />
+      </Document>
+      <p>Page {pageNumber} of {numPages}</p>
+    </div>
+  )
+}
 
 function AboutMe() {
   return (
-    <div style={{ padding: '10%' }}>
+    <div style={{ }}>
       <h2> About Me</h2>
 
       <div>
@@ -45,8 +85,10 @@ I plan to be a social software engineer, I will impact my teammates by offering 
 
 function App() {
   return (
-    <div>
+    <div style={{backgroundColor: 'black', padding: '10%', color: 'white'}}>
+      <h1 style={{textAlign: 'center'}}>Christian Williams</h1>
       <AboutMe />
+      <Resume />
     </div>
   );
 }
