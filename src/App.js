@@ -3,10 +3,10 @@ import React, { useState } from 'react';
 import { Document, Page } from 'react-pdf';
 
 
-function picture() {
+function Picture() {
   return (
-    <div>
-
+    <div style={{width: 400, height: 400, borderRadius: 400/ 2}}>
+      <img src='https://avatars.githubusercontent.com/u/46333279?s=400&u=5899fa8b0fd6bc1da8ed59c644c20397b6133c23&v=4' alt='image of avatar'/>
     </div>
   )
 }
@@ -87,6 +87,9 @@ function App() {
   return (
     <div style={{backgroundColor: 'black', padding: '10%', color: 'white'}}>
       <h1 style={{textAlign: 'center'}}>Christian Williams</h1>
+      <div style={{width: '100%', display: 'flex', justifyContent: 'center'}}>
+        <Picture />
+      </div>
       <AboutMe />
       <Resume />
     </div>
