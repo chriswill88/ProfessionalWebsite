@@ -5,16 +5,7 @@ function AboutMe() {
     <div>
       <h2> About Me</h2>
       <div>
-        <h3>Facts About me</h3>
-        <ol>
-          <li>I play multiple instruments</li>
-          <li>My first job was selling books door to door</li>
-          <li>I became the treasurer of student council in my first year at a college i went to</li>
-          <li>I love the beach but I can barely float in water</li>
-          <li>My first official tech job was at playstation</li>
-          <li>I plan to travel the world after i get things situated for myself</li>
-        </ol>
-      </div>
+
       <div>
         <h3>Motivation</h3>
         <ol>
@@ -22,11 +13,6 @@ function AboutMe() {
           <li>There are so many things I could do better. I want to come to know how great life could be for myself and for others if I had things in order. I can grow and even though I falter at times it is motivating to know that I can become better. I find that deeply empowering.</li>
           <li>As a software engineer I will bring a spirit of conscientiousness, diligence, and curiosity  into my work place. This motivation will keep me putting my best foot forward and it will  allow me to keep on improving.</li>
         </ol>
-      </div>
-
-      <div>
-        <h3>Holberton</h3>
-        <p>I learned that I can code and that I enjoy coding. I learned that difficult things can be conquered with hard work and diligence. I have learned that it is important to be prepared for good opportunities to come, by making sure to work hard. I have learned that burning out is more psychological than physical and that it is important to take time to really relax. I have also learned that I need to learn how to really relax. I have learned stepping away from a problem can lead to it being solved, but sometimes it's important to bust your head through problems to find solutions. Practice leads to simple clean solutions.</p>
       </div>
 
       <div>
@@ -54,6 +40,7 @@ I plan to be a social software engineer, I will impact my teammates by offering 
         </p>
       </div>
     </div>
+  </div>
   )
 }
 
