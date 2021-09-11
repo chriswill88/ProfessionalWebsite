@@ -2,9 +2,8 @@ import './App.css';
 
 function AboutMe() {
   return (
-    <div>
+    <div style={{ padding: '10%' }}>
       <h2> About Me</h2>
-      <div>
 
       <div>
         <h3>Motivation</h3>
@@ -40,7 +39,6 @@ I plan to be a social software engineer, I will impact my teammates by offering 
         </p>
       </div>
     </div>
-  </div>
   )
 }
 
