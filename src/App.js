@@ -31,7 +31,7 @@ function Portfolio({imgUrl, description, url, titles}) {
       <h3>{titles}</h3>
       <img src={imgUrl} alt='project'/>
       <p>{description}</p>
-      <a src={url}>link to project</a>      
+      <a download src={url}>link to project</a>      
     </div>
   )
 }
@@ -40,7 +40,7 @@ function Resume() {
 
   return (
     <div>
-      <a href='https://media-exp1.licdn.com/dms/image/C4D2DAQHm0xMUWXp7eA/profile-treasury-image-shrink_8192_8192/0/1624216395322?e=1631422800&v=beta&t=bdmlwDRw5cKxKjD-dPqRnQWfKQ2AWiSoJJaQMt-5DII'><img src='https://media-exp1.licdn.com/dms/image/C4D2DAQHm0xMUWXp7eA/profile-treasury-image-shrink_8192_8192/0/1624216395322?e=1631422800&v=beta&t=bdmlwDRw5cKxKjD-dPqRnQWfKQ2AWiSoJJaQMt-5DII' alt='pdf resume'/></a>
+      <a href='https://media-exp1.licdn.com/dms/image/C4D2DAQHm0xMUWXp7eA/profile-treasury-image-shrink_8192_8192/0/1624216395322?e=1631422800&v=beta&t=bdmlwDRw5cKxKjD-dPqRnQWfKQ2AWiSoJJaQMt-5DII'><img src='https://media-exp1.licdn.com/dms/image/C4D2DAQHm0xMUWXp7eA/profile-treasury-image-shrink_8192_8192/0/1624216395322?e=1631422800&v=beta&t=bdmlwDRw5cKxKjD-dPqRnQWfKQ2AWiSoJJaQMt-5DII' alt='pdf resume' style={{width: 800}}/></a>
     </div>
   )
 }
