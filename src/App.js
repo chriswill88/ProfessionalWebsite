@@ -1,11 +1,12 @@
 import './App.css';
 import React, { useState } from 'react';
 import { Document, Page } from 'react-pdf';
+import * as pdf from './resume.pdf';
 
 
 function Picture() {
   return (
-    <div style={{width: 400, height: 400, borderRadius: 400/ 2}}>
+    <div style={{width: 400, height: 400, borderRadius: 200}}>
       <img src='https://avatars.githubusercontent.com/u/46333279?s=400&u=5899fa8b0fd6bc1da8ed59c644c20397b6133c23&v=4' alt='image of avatar'/>
     </div>
   )
@@ -30,7 +31,7 @@ function Resume() {
   return (
     <div>
       <Document
-        file="resume.pdf"
+        file={pdf}
         onLoadSuccess={onDocumentLoadSuccess}
       >
         <Page pageNumber={pageNumber} />
