@@ -1,6 +1,5 @@
 import './App.css';
-import * as resume from './resume.png';
-import * as pdf from './resume.pdf';
+
 
 function ContactMe() {
   return(
@@ -15,7 +14,7 @@ function ContactMe() {
 function Picture() {
   return (
     <div style={{width: 400, height: 400, borderRadius: 200}}>
-      <img src='https://avatars.githubusercontent.com/u/46333279?s=400&u=5899fa8b0fd6bc1da8ed59c644c20397b6133c23&v=4' alt='image of avatar'/>
+      <img src='https://avatars.githubusercontent.com/u/46333279?s=400&u=5899fa8b0fd6bc1da8ed59c644c20397b6133c23&v=4' alt='avatar'/>
     </div>
   )
 }
@@ -30,7 +29,7 @@ function Portfolio({imgUrl, description, url, titles}) {
   return (
     <div>
       <h3>{titles}</h3>
-      <img src={imgUrl}/>
+      <img src={imgUrl} alt='project'/>
       <p>{description}</p>
       <a src={url}>link to project</a>      
     </div>
