@@ -1,8 +1,16 @@
 import './App.css';
-import React, { useState } from 'react';
-import { Document, Page } from 'react-pdf';
+import * as resume from './resume.png';
 import * as pdf from './resume.pdf';
 
+function ContactMe() {
+  return(
+    <div style={{display: 'inline-block'}}>
+      <a href="https://www.linkedin.com/in/christian--williams/">linkedIn  </a>
+      <a href="https://github.com/chriswill88">Github  </a>
+      <a href="https://twitter.com/ChrisWill79">Twitter</a>
+    </div>
+  )
+}
 
 function Picture() {
   return (
@@ -12,31 +20,28 @@ function Picture() {
   )
 }
 
-function Portfolio() {
+const obj = [
+  {id: 1, titles: 'Rocket Riders', imgUrl: 'https://user-images.githubusercontent.com/51524966/77604145-2dea0180-6ee8-11ea-879a-60d725c40006.jpg', description: 'Rocket Riders is a quirky game created by Team Synergy(Chris Williams, William Dyrland-Marquis, and Faizan Khan) designed to bring people together through the pursuit of decimating the alien horde which threatens us alien Rocket Riders allows up to 2 players video_game to team up and use their respective ships to attack the enemies, which fill up the screen quickly.', url: 'https://github.com/maybe-william/RocketRiders'},
+  {id: 2, titles: 'Simple Shell', imgUrl: 'https://media.giphy.com/media/65n8RPEa3r65q/giphy.gif?cid=ecf05e47mvawtij8uejtkcgkgpqd52b6c4t4487wyi6k2niu&rid=giphy.gif&ct=g', description: 'We create a shell called hsh. We made it closely resemble sh.', url: 'https://github.com/chriswill88/simple_shell'},
+
+  ]
+
+function Portfolio({imgUrl, description, url, titles}) {
   return (
     <div>
-
+      <h3>{titles}</h3>
+      <img src={imgUrl}/>
+      <p>{description}</p>
+      <a src={url}>link to project</a>      
     </div>
   )
 }
 
 function Resume() {
-  const [numPages, setNumPages] = useState(null);
-  const [pageNumber, setPageNumber] = useState(1);
-
-  function onDocumentLoadSuccess({ numPages }) {
-    setNumPages(numPages);
-  }
 
   return (
     <div>
-      <Document
-        file={pdf}
-        onLoadSuccess={onDocumentLoadSuccess}
-      >
-        <Page pageNumber={pageNumber} />
-      </Document>
-      <p>Page {pageNumber} of {numPages}</p>
+      <a href='https://media-exp1.licdn.com/dms/image/C4D2DAQHm0xMUWXp7eA/profile-treasury-image-shrink_8192_8192/0/1624216395322?e=1631422800&v=beta&t=bdmlwDRw5cKxKjD-dPqRnQWfKQ2AWiSoJJaQMt-5DII'><img src='https://media-exp1.licdn.com/dms/image/C4D2DAQHm0xMUWXp7eA/profile-treasury-image-shrink_8192_8192/0/1624216395322?e=1631422800&v=beta&t=bdmlwDRw5cKxKjD-dPqRnQWfKQ2AWiSoJJaQMt-5DII' alt='pdf resume'/></a>
     </div>
   )
 }
@@ -92,7 +97,11 @@ function App() {
         <Picture />
       </div>
       <AboutMe />
+      {
+        obj.map(i => <Portfolio key={i.id} imgUrl={i.imgUrl} titles={i.titles} description={i.description} url={i.url}/>)
+      }
       <Resume />
+      <ContactMe />
     </div>
   );
 }
